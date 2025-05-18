@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-image:url(library\ background.jpg);
+  background-size: cover;
+ 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  padding: 20px 0;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  
+  box-shadow: 0 0 15px rgba(10, 10, 10, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Mobile Responsiveness Adjustments */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0;
+    background: #ffffff;
+  }
+
+  .container {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    box-shadow:#444;
+    border-radius: 10;
+  }
+
+  .left-panel,
+  .right-panel {
+    flex: none;
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .left-panel {
+    order: 2;
+  }
+
+  .right-panel {
+    order: 1;
+    background: linear-gradient(135deg, #8b0000, #a52a2a);
+    padding: 40px 20px;
+  }
+
+  .left-panel h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .logo {
+    max-width: 250px;
+    margin-bottom: 20px;
+  }
+
+  .right-panel h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .home-link {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .left-panel input[type="email"],
+  .left-panel input[type="password"],
+  .left-panel input[type="text"] {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+
+  .login-btn {
+    margin-bottom: 10px;
+    padding: 12px;
+  }
+
+  .signup-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Existing CSS remains the same */
+.left-panel {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter:blur(30px);
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-panel h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+
+}
+
+.left-panel label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.left-panel input[type="email"],
+.left-panel input[type="password"],
+.left-panel input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #000;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  outline: none;
+  background: transparent;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.forgot {
+  font-size: 0.9rem;
+  color: #ac1010;
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+.login-btn {
+  width: 100%;
+  background-color: #800000;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.signup-text {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.signup-link {
+  color: #03e2ff;
+  text-decoration: none;
+}
+
+.right-panel {
+  flex: 1;
+  background: linear-gradient(135deg, #8b0000, #a52a2a);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.logo {
+  max-width: 350px;
+  margin-bottom: 30px;
+}
+
+.right-panel h2 {
+  font-size: 2.2rem;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.home-link {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #0a0000;
+  background-color: #fff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.home-link:hover {
+  background-color: #800000;
+  color: #fff;
+}
